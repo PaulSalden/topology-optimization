@@ -1,0 +1,39 @@
+{
+  "geometry": {
+    "shape": "rectangle",
+    "params": {"aspectratio": 4, "p": 2, "q": 2},
+    "refine": [12, 3]
+  },
+
+  "load": {
+    "type": "cantileverflip",
+    "force": [0, 0, 0, 7E3],
+    "params": {
+      "ratio": 0.01
+    }
+  },
+
+  "material": {
+    "E": 70E9,
+    "nu": 0.35
+  },
+
+  "optimization": {
+    "domain": 1,
+    "startdens": "",
+    "volfrac": 0.99999999,
+    "pmax": 1,
+    "pperit": 0.1,
+    "maxit": 1,
+    "refine": [1, 1],
+    "rmin": 0,
+    "filepath": "results/airy/",
+    "filename": "domain"
+  },
+
+  "plot": {
+    "npoints": 10,
+    "width": 5,
+    "extension": ".png"
+  }
+}
